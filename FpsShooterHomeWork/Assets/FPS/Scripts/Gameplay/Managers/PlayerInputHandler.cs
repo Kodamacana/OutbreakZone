@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace Unity.FPS.Gameplay
 {
+
     public class PlayerInputHandler : MonoBehaviour
     {
         [Tooltip("Sensitivity multiplier for moving the camera around")]
@@ -22,6 +23,7 @@ namespace Unity.FPS.Gameplay
 
         GameFlowManager m_GameFlowManager;
         PlayerCharacterController m_PlayerCharacterController;
+        [SerializeField] GameObject ARKitFace;
         bool m_FireInputWasHeld;
 
         void Start()
@@ -134,6 +136,19 @@ namespace Unity.FPS.Gameplay
             }
 
             return false;
+        }
+
+
+        public bool GetEyesState()
+        {
+
+            ARKitFace.transform.GetComponent<ARKitFaceActor>().
+                bool isGamepad = Input.GetAxis(GameConstants.k_ButtonNameGamepadAim) != 0f;
+            bool i = isGamepad
+                ? (Input.GetAxis(GameConstants.k_ButtonNameGamepadAim) > 0f)
+                : Input.GetButton(GameConstants.k_ButtonNameAim);
+            return true;
+
         }
 
         public bool GetSprintInputHeld()

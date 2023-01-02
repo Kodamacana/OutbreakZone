@@ -5,7 +5,6 @@ using UnityEngine.Events;
 
 namespace Unity.FPS.Gameplay
 {
-    [RequireComponent(typeof(PlayerInputHandler))]
     public class PlayerWeaponsManager : MonoBehaviour
     {
         public enum WeaponSwitchState
@@ -92,6 +91,7 @@ namespace Unity.FPS.Gameplay
         float m_TimeStartedWeaponSwitch;
         WeaponSwitchState m_WeaponSwitchState;
         int m_WeaponSwitchNewWeaponIndex;
+        bool eyesClose = false;
 
         void Start()
         {
@@ -137,6 +137,7 @@ namespace Unity.FPS.Gameplay
                 }
                 // handle aiming down sights
                 IsAiming = m_InputHandler.GetAimInputHeld();
+                IsAiming = eyesClose;
 
                 // handle shooting
                 bool hasFired = activeWeapon.HandleShootInputs(
