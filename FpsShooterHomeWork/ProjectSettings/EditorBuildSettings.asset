@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/FPS/Scenes/LabMap.unity
     guid: 89e66b0bffc00a543813f0748c8c96df
+  - enabled: 1
+    path: Assets/FPS/Scenes/SeaportMap.unity
+    guid: fdd76ced07b7c27468da3e8f6857a5b3
+  - enabled: 1
+    path: Assets/FPS/Scenes/SnowMap.unity
+    guid: a4ca55080480bfa4bba17ca3c2e0b27d
   m_configObjects: {}
