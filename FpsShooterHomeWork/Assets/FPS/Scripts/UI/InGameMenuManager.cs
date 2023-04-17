@@ -83,6 +83,7 @@ namespace Unity.FPS.UI
                     ControlImage.SetActive(false);
                     return;
                 }
+                //BURAYA EKLE
 
                 SetPauseMenuActivation(!MenuRoot.activeSelf);
 
