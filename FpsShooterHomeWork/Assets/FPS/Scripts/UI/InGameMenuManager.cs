@@ -10,6 +10,7 @@ namespace Unity.FPS.UI
     {
         [Tooltip("Root GameObject of the menu used to toggle its activation")]
         public GameObject MenuRoot;
+        public GameObject ShopMenu;
 
         [Tooltip("Master volume when menu is open")] [Range(0.001f, 1f)]
         public float VolumeWhenMenuOpen = 0.5f;
@@ -63,7 +64,7 @@ namespace Unity.FPS.UI
         void Update()
         {
             // Lock cursor when clicking outside of menu
-            if (!MenuRoot.activeSelf && Input.GetMouseButtonDown(0))
+            if (!ShopMenu.activeSelf && Input.GetMouseButtonDown(0))
             {
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
@@ -76,7 +77,7 @@ namespace Unity.FPS.UI
             }
 
             if (Input.GetButtonDown(GameConstants.k_ButtonNamePauseMenu)
-                || (MenuRoot.activeSelf && Input.GetButtonDown(GameConstants.k_ButtonNameCancel)))
+                || (ShopMenu.activeSelf && Input.GetButtonDown(GameConstants.k_ButtonNameCancel)))
             {
                 if (ControlImage.activeSelf)
                 {
@@ -85,9 +86,11 @@ namespace Unity.FPS.UI
                 }
                 //BURAYA EKLE
 
-                SetPauseMenuActivation(!MenuRoot.activeSelf);
-
+                //SetPauseMenuActivation(!ShopMenu.activeSelf);
+                setShop(!ShopMenu.activeSelf);
             }
+
+
 
             if (Input.GetAxisRaw(GameConstants.k_AxisNameVertical) != 0)
             {
@@ -99,6 +102,28 @@ namespace Unity.FPS.UI
             }
         }
 
+        void setShop(bool active)
+        {
+            ShopMenu.SetActive(active);
+
+            if (ShopMenu.activeSelf)
+            {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+                Time.timeScale = 0f;
+                AudioUtility.SetMasterVolume(VolumeWhenMenuOpen);
+
+                EventSystem.current.SetSelectedGameObject(null);
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+                Time.timeScale = 1f;
+                AudioUtility.SetMasterVolume(1);
+            }
+        }
+
         public void ClosePauseMenu()
         {
             SetPauseMenuActivation(false);
@@ -106,9 +131,9 @@ namespace Unity.FPS.UI
 
         void SetPauseMenuActivation(bool active)
         {
-            MenuRoot.SetActive(active);
+            ShopMenu.SetActive(active);
 
-            if (MenuRoot.activeSelf)
+            if (ShopMenu.activeSelf)
             {
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
