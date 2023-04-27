@@ -11,6 +11,7 @@ public class Gun : MonoBehaviour
     public Camera fpsCam;
     public VisualEffect muzzleFlash;
     
+
     void Update()
     {
         if (Input.GetButtonDown("Fire1"))
