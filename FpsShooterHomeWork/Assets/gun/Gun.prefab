@@ -246,10 +246,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9c42e1e6a127694fb04cd7876cfc636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 20
+  timeBetweenShooting: 0.05
+  spread: 0.02
   range: 100
+  reloadTime: 1
+  timeBetweenShots: 0
+  magazineSize: 30
+  bulletsPerTap: 1
+  allowButtonHold: 1
   fpsCam: {fileID: 0}
-  muzzleFlash: {fileID: 8019117135697506814}
+  attackPoint: {fileID: 0}
+  whatIsEnemy:
+    serializedVersion: 2
+    m_Bits: 64
+  muzzleFlash: {fileID: 0}
+  bulletHoleGraphic: {fileID: 0}
+  camShakeMagnitude: 0.1
+  camShakeDuration: 0.1
+  text: {fileID: 0}
 --- !u!1 &8019887254053525102
 GameObject:
   m_ObjectHideFlags: 0

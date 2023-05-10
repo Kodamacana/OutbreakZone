@@ -6,7 +6,6 @@ public class WeaponSwitching : MonoBehaviour
 {
     public int selectedWeapon = 0;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +41,7 @@ public class WeaponSwitching : MonoBehaviour
     void SelectedWeapon()
     {
         int i = 0;
+                    
         foreach (Transform weapon in transform)
         {
             if (i == selectedWeapon)
@@ -49,6 +49,9 @@ public class WeaponSwitching : MonoBehaviour
             else
                 weapon.gameObject.SetActive(false);
             i++;
+
+            if(weapon.transform.GetComponent<Gun>() != null) 
+                weapon.transform.GetComponent<Gun>().muzzleFlash.gameObject.SetActive(false);
         }
     }
 }
