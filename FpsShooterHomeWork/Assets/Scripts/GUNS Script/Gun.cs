@@ -16,13 +16,15 @@ public class Gun : MonoBehaviour
     bool shooting, readyToShoot, reloading;
 
     //Reference
+    [SerializeField] Animator GunAnim;
     public Camera fpsCam;
     public Transform attackPoint;
     public RaycastHit rayHit;
     public LayerMask whatIsEnemy;
 
     //Graphics
-    public VisualEffect muzzleFlash;
+    public VisualEffect _muzzleFlash;
+    public VisualEffect _brustPrefab;
     public GameObject bulletHoleGraphic;
     public float camShakeMagnitude, camShakeDuration;
     public TextMeshProUGUI text;
@@ -58,23 +60,25 @@ public class Gun : MonoBehaviour
                 bulletsShot = bulletsPerTap;
                 Shoot();
             }
-            if (bulletsLeft <= 0)
-            {
-                muzzleFlash.SendEvent("OnPlay");
-            }
-            if (reloading)
-            {
-                muzzleFlash.SendEvent("OnPlay");
-            }
-            if (!allowButtonHold && !shooting && !reloading && bulletsLeft > 0)
-            {
-                muzzleFlash.SendEvent("OnPlay");
-            }
 
-            if (allowButtonHold && !shooting && !reloading && bulletsLeft > 0)
-            {
-                muzzleFlash.SendEvent("OnPlay");
-            }
+
+            //if (bulletsLeft <= 0)
+            //{
+            //    _muzzleFlash.SendEvent("OnPlay");
+            //}
+            //if (reloading)
+            //{
+            //   _muzzleFlash.SendEvent("OnPlay");
+            //}
+            //if (!allowButtonHold && !shooting && !reloading && bulletsLeft > 0)
+            //{
+            //    _muzzleFlash.SendEvent("OnPlay");
+            //}
+
+            //if (allowButtonHold && !shooting && !reloading && bulletsLeft > 0)
+            //{
+            //    _muzzleFlash.SendEvent("OnPlay");
+            //}
         }
     }
     private void Shoot()
@@ -88,7 +92,7 @@ public class Gun : MonoBehaviour
 
         //Calculate Direction with Spread
         Vector3 direction = fpsCam.transform.forward + new Vector3(x, y, 0);
-
+        spawnMuzzle();
         //RayCast
         if (Physics.Raycast(fpsCam.transform.position, direction, out rayHit, range, whatIsEnemy))
         {
@@ -103,7 +107,7 @@ public class Gun : MonoBehaviour
         transform.GetComponent<AdvancedWeaponRecoil>().Fire();
 
         //Graphics
-        //Instantiate(bulletHoleGraphic, rayHit.point, Quaternion.Euler(0, 180, 0));
+        Instantiate(bulletHoleGraphic, rayHit.point, Quaternion.Euler(0, 180, 0));
 
         bulletsLeft--;
         bulletsShot--;
@@ -114,6 +118,13 @@ public class Gun : MonoBehaviour
             Invoke("Shoot", timeBetweenShots);
 
     }
+
+    void spawnMuzzle()
+    {
+        VisualEffect newMuzzleEffect = Instantiate(_brustPrefab,  _muzzleFlash.transform.position, _muzzleFlash.transform.rotation,transform);
+        newMuzzleEffect.Play();
+        Destroy(newMuzzleEffect.gameObject, spread);
+    }
     private void ResetShot()
     {
         readyToShoot = true;
@@ -121,6 +132,8 @@ public class Gun : MonoBehaviour
 
     private void Reload()
     {
+        GunAnim.SetTrigger("reload");
+
         reloading = true;
         Invoke("ReloadFinished", reloadTime);
     }

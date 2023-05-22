@@ -51,7 +51,7 @@ public class WeaponSwitching : MonoBehaviour
             i++;
 
             if(weapon.transform.GetComponent<Gun>() != null) 
-                weapon.transform.GetComponent<Gun>().muzzleFlash.gameObject.SetActive(false);
+                weapon.transform.GetComponent<Gun>()._muzzleFlash.gameObject.SetActive(false);
         }
     }
 }
