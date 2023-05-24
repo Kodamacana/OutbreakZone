@@ -6,6 +6,9 @@ using UnityEngine;
 
 public class MoveMe : MonoBehaviour
 {
+    [SerializeField] bool AR;
+    [Range(1, 10)]
+    public float ARsensivity = 1;
     public float walkingSpeed = 7.5f;
     public float runningSpeed = 11.5f;
     public float jumpSpeed = 8.0f;
@@ -17,17 +20,37 @@ public class MoveMe : MonoBehaviour
     CharacterController characterController;
     Vector3 moveDirection = Vector3.zero;
     float rotationX = 0;
+    [Header("AR Callibration")]
+    [Header("------------------")]
+    [Header("Head Rotation")]
+    [SerializeField] float LeftCoordinate = 0;
+    [SerializeField] float RightCoordinate = 0;
+    [SerializeField] GameObject HeadObject;
+    Vector3 HeadRotation;
+
+    [SerializeField] SkinnedMeshRenderer skinnedMeshRenderer;
+    Mesh mesh;
+    int blendShapeIndex = 0;
+    int blendShapeCount = 0;
 
     [HideInInspector]
     public bool canMove = true;
 
     void Start()
     {
+        mesh = skinnedMeshRenderer.sharedMesh;
+
+        blendShapeCount = skinnedMeshRenderer.sharedMesh.blendShapeCount;
         characterController = GetComponent<CharacterController>();
 
         // Lock cursor
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+    }
+
+    void Callibration()
+    {
+        //head rotationPosition = Vector3 HeadRotation
     }
 
     void Update()
@@ -65,12 +88,32 @@ public class MoveMe : MonoBehaviour
         // Player and Camera rotation
         if (canMove)
         {
-            rotationX += Input.GetAxis("Mouse Y") * lookSpeed;
-            rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
-            playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
-            transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
+            if (!AR)
+            {
+                rotationX += Input.GetAxis("Mouse Y") * lookSpeed;
+                rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
+                playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
+                transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
+            }
+            else
+            {
+                var result = Mathf.Abs(RightCoordinate) + Mathf.Abs(LeftCoordinate);
+                result = 360 / result;
+                float originalValue = HeadObject.transform.localRotation.eulerAngles.y;
 
-            
+                playerCamera.transform.localRotation = Quaternion.Euler(HeadObject.transform.localRotation.eulerAngles.x, 0, 0);
+                transform.rotation = Quaternion.Euler(0, originalValue * result, 0);
+            }
         }
     }
+
+
+
+
+   
+        
+
+        
+    
+
 }
