@@ -20,6 +20,7 @@ public class MoveMe : MonoBehaviour
     CharacterController characterController;
     Vector3 moveDirection = Vector3.zero;
     float rotationX = 0;
+    [SerializeField] ZombieController zombieController;
     [Header("AR Callibration")]
     [Header("------------------")]
     [Header("Head Rotation")]
@@ -38,7 +39,8 @@ public class MoveMe : MonoBehaviour
 
     void Start()
     {
-        mesh = skinnedMeshRenderer.sharedMesh;
+        //zombieController.SpawnZombies();
+           mesh = skinnedMeshRenderer.sharedMesh;
 
         blendShapeCount = skinnedMeshRenderer.sharedMesh.blendShapeCount;
         characterController = GetComponent<CharacterController>();

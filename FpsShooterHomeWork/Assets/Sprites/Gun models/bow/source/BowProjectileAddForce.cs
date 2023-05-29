@@ -21,7 +21,13 @@ public class BowProjectileAddForce : MonoBehaviour
 
     void SpinObjectInAir()
     {
+        float _yVelocity = rigidB.velocity.y;
+        float _zVelocity = rigidB.velocity.z;
+        float _xVelocity = rigidB.velocity.x;
+        float _combinedVelocity = Mathf.Sqrt(_xVelocity * _xVelocity + _zVelocity * _zVelocity);
+        float _fallAngle = -1 * Mathf.Atan2(_yVelocity, _combinedVelocity) * 180 / Mathf.PI;
 
+        transform.eulerAngles = new Vector3(_fallAngle, transform.eulerAngles.y, transform.eulerAngles.z);
     }
 
     void Update()
