@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Ceset
+  - Terrain
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - FirstPersonWeapon
   - PhysicalAmmo
   - Ceset
-  - 
+  - Terrain
   - 
   - 
   - 
