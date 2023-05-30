@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BowShoot : MonoBehaviour
 {
+    [SerializeField] Animator Anim;
     [SerializeField] float pullSpeed;
     [SerializeField] GameObject arrowPrefab;
     [SerializeField] GameObject arrow;
@@ -13,7 +14,11 @@ public class BowShoot : MonoBehaviour
     Quaternion ArrowRotation;
     bool arrowSlotted = false;
     float pullAmounth = 0;
-    
+
+
+    [Header("Sounds")]
+    [SerializeField] public AudioSource ArrowSoundSource;
+    [SerializeField] public AudioClip Fire;
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +46,7 @@ public class BowShoot : MonoBehaviour
         }
     }
 
+   
     void ShootLogic()
     {
         Debug.Log("trs: "+arrow.transform.localPosition);
@@ -48,19 +54,22 @@ public class BowShoot : MonoBehaviour
         {
             if (pullAmounth < 100) pullAmounth = 100;
 
-            SkinnedMeshRenderer _bowSkin = bow.transform.GetComponent<SkinnedMeshRenderer>();
-            SkinnedMeshRenderer _arrowSkin = arrow.transform.GetComponent<SkinnedMeshRenderer>();
-
             Rigidbody _arrowRigidB = arrow.transform.GetComponent<Rigidbody>();
 
             BowProjectileAddForce _arrowProjectile = arrow.transform.GetComponent<BowProjectileAddForce>();
             if (Input.GetMouseButton(0))
             {
+                Anim.SetBool("Fire", true);
                 pullAmounth += Time.deltaTime * pullSpeed;
             }
             if (Input.GetMouseButtonUp(0))
             {
-               
+                ArrowSoundSource.clip = Fire;
+                if (ArrowSoundSource.isPlaying)
+                    ArrowSoundSource.Stop();
+                ArrowSoundSource.Play();
+
+                Anim.SetBool("Fire", false);
                 arrowSlotted = false;
                 _arrowRigidB.isKinematic = false;
                 arrow.transform.parent = null;

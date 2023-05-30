@@ -6,6 +6,8 @@ using UnityEngine.VFX;
 
 public class Gun : MonoBehaviour
 {
+    [SerializeField] SkinnedMeshRenderer skinnedMeshRenderer;
+    [SerializeField] bool AR = false;
     public int damage;
     public float timeBetweenShooting, spread, range, reloadTime, timeBetweenShots;
     public int magazineSize, bulletsPerTap;
@@ -18,7 +20,8 @@ public class Gun : MonoBehaviour
     //Reference
     [SerializeField] Animator GunAnim;
     public Camera fpsCam;
-    public Transform attackPoint;
+    public GameObject Crosshair;
+    public GameObject GunsHUD;
     public RaycastHit rayHit;
     public LayerMask whatIsEnemy;
 
@@ -29,11 +32,53 @@ public class Gun : MonoBehaviour
     public float camShakeMagnitude, camShakeDuration;
     public TextMeshProUGUI text;
 
+    [Header("Sounds")]
+    [SerializeField] public AudioSource GunSoundSource;
+    [SerializeField] public AudioClip Reload1;
+    [SerializeField] public AudioClip Reload2;
+    [SerializeField] public AudioClip Fire;
+    [SerializeField] public AudioClip Equip;
+
     private void Awake()
     {
         bulletsLeft = magazineSize;
         readyToShoot = true;
+        
     }
+
+    public void PlayReload1()
+    {
+        InstantiateAudio(Reload1);
+        playSound();
+    }
+    public void PlayReload2()
+    {
+        InstantiateAudio(Reload2);
+        playSound();
+    }
+    public void PlayFire()
+    {
+        InstantiateAudio(Fire);
+        playSound();
+    }
+    public void PlayEquip()
+    {
+        InstantiateAudio(Equip);
+        playSound();
+    }
+
+    void InstantiateAudio(AudioClip clip)
+    {
+        GunSoundSource.clip = clip;
+    }
+
+    void playSound()
+    {
+        if (GunSoundSource.isPlaying)
+            GunSoundSource.Stop();
+            GunSoundSource.Play();
+    }
+
     private void Update()
     {
         HandleShootingInput();
@@ -49,6 +94,15 @@ public class Gun : MonoBehaviour
         {
             bool shooting = allowButtonHold ? Input.GetKey(KeyCode.Mouse0) : Input.GetKeyDown(KeyCode.Mouse0);
             bool canShoot = readyToShoot && shooting && !reloading && bulletsLeft > 0;
+            if (AR)
+            {
+                bool ARFire = false;
+                float mouthSmile_L = skinnedMeshRenderer.GetBlendShapeWeight(skinnedMeshRenderer.sharedMesh.GetBlendShapeIndex("mouthSmile_L"));
+                float mouthSmile_R = skinnedMeshRenderer.GetBlendShapeWeight(skinnedMeshRenderer.sharedMesh.GetBlendShapeIndex("mouthSmile_R"));
+                if (mouthSmile_L >= 40 && mouthSmile_R >= 40) ARFire = true;
+
+                canShoot = ARFire && readyToShoot && !reloading && bulletsLeft > 0;
+            }
 
             if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && !reloading)
             {
@@ -60,43 +114,30 @@ public class Gun : MonoBehaviour
                 bulletsShot = bulletsPerTap;
                 Shoot();
             }
-
-
-            //if (bulletsLeft <= 0)
-            //{
-            //    _muzzleFlash.SendEvent("OnPlay");
-            //}
-            //if (reloading)
-            //{
-            //   _muzzleFlash.SendEvent("OnPlay");
-            //}
-            //if (!allowButtonHold && !shooting && !reloading && bulletsLeft > 0)
-            //{
-            //    _muzzleFlash.SendEvent("OnPlay");
-            //}
-
-            //if (allowButtonHold && !shooting && !reloading && bulletsLeft > 0)
-            //{
-            //    _muzzleFlash.SendEvent("OnPlay");
-            //}
         }
     }
     private void Shoot()
     {
+        PlayFire();
         readyToShoot = false;
 
-
-        //Spread
         float x = Random.Range(-spread, spread);
         float y = Random.Range(-spread, spread);
 
         //Calculate Direction with Spread
         Vector3 direction = fpsCam.transform.forward + new Vector3(x, y, 0);
         spawnMuzzle();
+
         //RayCast
         if (Physics.Raycast(fpsCam.transform.position, direction, out rayHit, range, whatIsEnemy))
         {
-            Debug.Log(rayHit.collider.name);
+            //bullet hole
+            if (!rayHit.transform.name.Contains("Zombi"))
+            {
+                GameObject obj = Instantiate(bulletHoleGraphic, rayHit.point, Quaternion.LookRotation(rayHit.normal));
+                obj.transform.position += obj.transform.forward / 1000;
+            }            
+            //
 
             Target target = rayHit.transform.GetComponent<Target>();
 
@@ -105,9 +146,6 @@ public class Gun : MonoBehaviour
         }
 
         transform.GetComponent<AdvancedWeaponRecoil>().Fire();
-
-        //Graphics
-        Instantiate(bulletHoleGraphic, rayHit.point, Quaternion.Euler(0, 180, 0));
 
         bulletsLeft--;
         bulletsShot--;

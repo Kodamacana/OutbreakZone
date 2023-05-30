@@ -41,17 +41,33 @@ public class WeaponSwitching : MonoBehaviour
     void SelectedWeapon()
     {
         int i = 0;
-                    
+
         foreach (Transform weapon in transform)
         {
-            if (i == selectedWeapon)
-                weapon.gameObject.SetActive(true);
-            else
-                weapon.gameObject.SetActive(false);
-            i++;
+            Gun gunComponent = weapon.GetComponentInChildren<Gun>();
+            if (gunComponent != null)
+            {
+                bool isSelectedWeapon = (i == selectedWeapon);
 
-            if(weapon.transform.GetComponent<Gun>() != null) 
-                weapon.transform.GetComponent<Gun>()._muzzleFlash.gameObject.SetActive(false);
+                weapon.gameObject.SetActive(isSelectedWeapon);
+                gunComponent.Crosshair.SetActive(isSelectedWeapon);
+                gunComponent.GunsHUD.SetActive(isSelectedWeapon);
+
+                AudioSource audioSource = weapon.GetComponentInChildren<AudioSource>();
+                if (audioSource != null)
+                    audioSource.clip = null;
+
+                if (!isSelectedWeapon)
+                {
+                    gunComponent.Crosshair.SetActive(false);
+                    gunComponent.GunsHUD.SetActive(false);
+                }
+
+                if(gunComponent._muzzleFlash != null) gunComponent._muzzleFlash.gameObject.SetActive(!isSelectedWeapon);
+
+                i++;
+            }
         }
     }
+
 }

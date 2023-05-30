@@ -5,11 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Ceset
+  - Terrain
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - designMap
   - Water
   - UI
   - Enemy
@@ -18,8 +20,8 @@ TagManager:
   - 
   - FirstPersonWeapon
   - PhysicalAmmo
-  - 
-  - 
+  - Ceset
+  - Terrain
   - 
   - 
   - 

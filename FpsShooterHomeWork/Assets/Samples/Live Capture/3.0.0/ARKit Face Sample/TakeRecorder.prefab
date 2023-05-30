@@ -1,0 +1,203 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4570954156641579360
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4570954156641579366}
+  - component: {fileID: 4570954156641579367}
+  m_Layer: 0
+  m_Name: New FaceDevice
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4570954156641579366
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4570954156641579360}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4570954156964050651}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4570954156641579367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4570954156641579360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3c82e07b9a14fe3958806045dbb5693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Guid: e1f0879c-158b-4144-bd84-68144c887a17
+  m_Actor: {fileID: 0}
+  m_Channels: 15
+  m_Pose:
+    BlendShapes:
+      BrowDownLeft: 0
+      BrowDownRight: 0
+      BrowInnerUp: 0.13813853
+      BrowOuterUpLeft: 0.002170151
+      BrowOuterUpRight: 0.0032467544
+      CheekPuff: 0.028807798
+      CheekSquintLeft: 0.06968207
+      CheekSquintRight: 0.06623333
+      EyeBlinkLeft: 0.005174266
+      EyeBlinkRight: 0.0051685176
+      EyeLookDownLeft: 0.10229242
+      EyeLookDownRight: 0.102493614
+      EyeLookInLeft: 0.10997854
+      EyeLookInRight: 0.028148424
+      EyeLookOutLeft: 0
+      EyeLookOutRight: 0
+      EyeLookUpLeft: 0
+      EyeLookUpRight: 0
+      EyeSquintLeft: 0.08821207
+      EyeSquintRight: 0.08825052
+      EyeWideLeft: 0.012606433
+      EyeWideRight: 0.012828969
+      JawForward: 0.054714262
+      JawLeft: 0.0010435316
+      JawOpen: 0.081437185
+      JawRight: 0
+      MouthClose: 0.10747236
+      MouthDimpleLeft: 0.058540948
+      MouthDimpleRight: 0.063440904
+      MouthFrownLeft: 0
+      MouthFrownRight: 0
+      MouthFunnel: 0.12846746
+      MouthLeft: 0.045170516
+      MouthLowerDownLeft: 0.20111054
+      MouthLowerDownRight: 0.18750542
+      MouthPressLeft: 0.042787887
+      MouthPressRight: 0.041291855
+      MouthPucker: 0.07976163
+      MouthRight: 0
+      MouthRollLower: 0.10129928
+      MouthRollUpper: 0.05154495
+      MouthShrugLower: 0.08074705
+      MouthShrugUpper: 0.051083136
+      MouthSmileLeft: 0.026370414
+      MouthSmileRight: 0.0012235716
+      MouthStretchLeft: 0.17999981
+      MouthStretchRight: 0.1792031
+      MouthUpperUpLeft: 0.028358947
+      MouthUpperUpRight: 0.024345348
+      NoseSneerLeft: 0.06957077
+      NoseSneerRight: 0.072163515
+      TongueOut: 0.0000024088527
+    HeadPosition: {x: 0.008569455, y: 0.024492493, z: -0.26378232}
+    HeadOrientation: {x: -0.0731447, y: 0.023297131, z: 0.055613875, w: -0.995497}
+    LeftEyeOrientation: {x: -0.031298626, y: 0.008593129, z: 0.00026909492, w: -0.9994731}
+    RightEyeOrientation: {x: -0.03122074, y: -0.033568326, z: -0.0010491315, w: -0.99894816}
+  m_SyncPresentationOffset:
+    m_FrameNumber: 0
+    m_Subframe:
+      m_Subframe: 0
+      m_Resolution: 0
+  m_IsSynchronized: 0
+  m_BufferSize: 3
+  m_Recorder:
+    m_PositionError: 0.5
+    m_RotationError: 0.5
+    m_BlendShapeError: 0.5
+--- !u!1 &4570954156964050646
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4570954156964050651}
+  - component: {fileID: 4570954156964050644}
+  - component: {fileID: 4570954156964050645}
+  m_Layer: 0
+  m_Name: TakeRecorder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4570954156964050651
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4570954156964050646}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4570954156641579366}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &4570954156964050644
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4570954156964050646}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: a42ca493bba0c314e86e05cbd6ec9ddf, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 3147584154427192630, guid: e0e2855fde5b6da4dbb83963592db32f, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -1295848888258722458, guid: 621a79e91f5dbcc43862554de633d385, type: 2}
+    value: {fileID: 0}
+  m_ExposedReferences:
+    m_References:
+    - SampleHead_v.007: {fileID: 0}
+--- !u!114 &4570954156964050645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4570954156964050646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f2c132feb88d6345985a670b685927d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_DefaultContext:
+    m_UnityObject: {fileID: 4570954156964050645}
+    m_Directory: Assets/Takes
+    m_SceneNumber: 1
+    m_ShotName: New Shot
+    m_TakeNumber: 1
+    m_Description: 
+    m_Take: {fileID: 0}
+    m_IterationBase: {fileID: 0}
+    m_Director: {fileID: 4570954156964050644}
+  m_FrameRate:
+    m_Numerator: 30
+    m_Denominator: 1
+    m_IsDropFrame: 0
+  m_Devices:
+  - {fileID: 4570954156641579367}
+  m_Live: 1
