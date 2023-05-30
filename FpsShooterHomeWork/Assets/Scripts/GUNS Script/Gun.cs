@@ -21,6 +21,7 @@ public class Gun : MonoBehaviour
     [SerializeField] Animator GunAnim;
     public Camera fpsCam;
     public GameObject Crosshair;
+    public GameObject GunsHUD;
     public RaycastHit rayHit;
     public LayerMask whatIsEnemy;
 

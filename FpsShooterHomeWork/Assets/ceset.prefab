@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7328417662279425402}
   - component: {fileID: 7328417662279425405}
   - component: {fileID: 1806475836}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ceset parca3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,8 +224,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7328417662309258968}
-  - component: {fileID: 7919135409894033222}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ceset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -250,22 +249,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7919135409894033222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7328417662309258971}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9511c9fea01432e4f96cea09ee3cd716, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bloodMarks:
-  - {fileID: 1806475836}
-  - {fileID: 1806475834}
-  - {fileID: 1806475832}
 --- !u!1 &7598325568150918388
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,9 +262,8 @@ GameObject:
   - component: {fileID: 8246742552565839137}
   - component: {fileID: 6167301326248608233}
   - component: {fileID: 6167301326248608232}
-  - component: {fileID: 1806475835}
   - component: {fileID: 1806475834}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ceset parca2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -383,19 +365,6 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 2
---- !u!114 &1806475835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7598325568150918388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9511c9fea01432e4f96cea09ee3cd716, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bloodMarks: []
 --- !u!96 &1806475834
 TrailRenderer:
   serializedVersion: 2
@@ -508,9 +477,8 @@ GameObject:
   - component: {fileID: 8246742553953883310}
   - component: {fileID: 6167301324683878498}
   - component: {fileID: 6167301324683878501}
-  - component: {fileID: 1806475833}
   - component: {fileID: 1806475832}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ceset parca1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -612,19 +580,6 @@ CapsuleCollider:
   m_Height: 0.014580873
   m_Direction: 0
   m_Center: {x: 0.00012334705, y: -0.00056942855, z: -0.0005048368}
---- !u!114 &1806475833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7598325568599979387}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9511c9fea01432e4f96cea09ee3cd716, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bloodMarks: []
 --- !u!96 &1806475832
 TrailRenderer:
   serializedVersion: 2

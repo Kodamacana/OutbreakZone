@@ -5,7 +5,6 @@ using UnityEngine;
 public class WeaponSwitching : MonoBehaviour
 {
     public int selectedWeapon = 0;
-    [SerializeField] GameObject Crosshair;
 
     // Start is called before the first frame update
     void Start()
@@ -52,13 +51,17 @@ public class WeaponSwitching : MonoBehaviour
 
                 weapon.gameObject.SetActive(isSelectedWeapon);
                 gunComponent.Crosshair.SetActive(isSelectedWeapon);
+                gunComponent.GunsHUD.SetActive(isSelectedWeapon);
 
                 AudioSource audioSource = weapon.GetComponentInChildren<AudioSource>();
                 if (audioSource != null)
                     audioSource.clip = null;
 
                 if (!isSelectedWeapon)
+                {
                     gunComponent.Crosshair.SetActive(false);
+                    gunComponent.GunsHUD.SetActive(false);
+                }
 
                 if(gunComponent._muzzleFlash != null) gunComponent._muzzleFlash.gameObject.SetActive(!isSelectedWeapon);
 

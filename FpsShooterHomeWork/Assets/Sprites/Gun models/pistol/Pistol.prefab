@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4246267217562799687
 Transform:
   m_ObjectHideFlags: 0
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 8947731193218347915}
   - component: {fileID: 8947731193218347914}
   m_Layer: 0
-  m_Name: PistolMuzzleFlash
+  m_Name: PistolMuzzleFlash1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -310,40 +310,122 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6615040062564873748}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6615040062564873753
-MonoBehaviour:
+--- !u!82 &6121257223501733869
+AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6272456767438129989}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9c42e1e6a127694fb04cd7876cfc636, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 10
-  timeBetweenShooting: 0.4
-  spread: 0.15
-  range: 100
-  reloadTime: 1
-  timeBetweenShots: 0.7
-  magazineSize: 16
-  bulletsPerTap: 1
-  allowButtonHold: 0
-  GunAnim: {fileID: 0}
-  fpsCam: {fileID: 0}
-  attackPoint: {fileID: 0}
-  whatIsEnemy:
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
     serializedVersion: 2
-    m_Bits: 2147483647
-  _muzzleFlash: {fileID: 8947731193218347915}
-  _brustPrefab: {fileID: 2244800528414255838, guid: e3b38a515d1bc9b468730bb9e207dcd4,
-    type: 3}
-  bulletHoleGraphic: {fileID: 0}
-  camShakeMagnitude: 0.1
-  camShakeDuration: 0.1
-  text: {fileID: 0}
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!95 &6121257223501733875
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6272456767438129989}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 97062421ba9c0794ba0df2406283902a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &6615040062564873750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -370,6 +452,49 @@ MonoBehaviour:
   amount: 0.02
   MaxAmount: 0.06
   smootAmount: 6
+--- !u!114 &6615040062564873753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6272456767438129989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c42e1e6a127694fb04cd7876cfc636, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skinnedMeshRenderer: {fileID: 0}
+  AR: 0
+  damage: 10
+  timeBetweenShooting: 0.4
+  spread: 0.15
+  range: 100
+  reloadTime: 0.5
+  timeBetweenShots: 0.7
+  magazineSize: 16
+  bulletsPerTap: 1
+  allowButtonHold: 0
+  GunAnim: {fileID: 6121257223501733875}
+  fpsCam: {fileID: 0}
+  Crosshair: {fileID: 0}
+  GunsHUD: {fileID: 0}
+  whatIsEnemy:
+    serializedVersion: 2
+    m_Bits: 3391
+  _muzzleFlash: {fileID: 8947731193218347915}
+  _brustPrefab: {fileID: 2244800528414255838, guid: e3b38a515d1bc9b468730bb9e207dcd4,
+    type: 3}
+  bulletHoleGraphic: {fileID: 7146995129178081840, guid: b16d739d5c8830a42b8d854f8948ca20,
+    type: 3}
+  camShakeMagnitude: 0.1
+  camShakeDuration: 0.1
+  text: {fileID: 0}
+  GunSoundSource: {fileID: 6121257223501733869}
+  Reload1: {fileID: 8300000, guid: 1b1d66d3235f41848bbe48bad2353ba3, type: 3}
+  Reload2: {fileID: 8300000, guid: a8f59d1e201c504479e8f47e5f84b03b, type: 3}
+  Fire: {fileID: 8300000, guid: a036747a71fca7d42b558150c40834dd, type: 3}
+  Equip: {fileID: 8300000, guid: 8a076371a7f691a468e077df5e009534, type: 3}
 --- !u!4 &6649545741210833407 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9a78979a2be987844b5a548d26c04ba9,
