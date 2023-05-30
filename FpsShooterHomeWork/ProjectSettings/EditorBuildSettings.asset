@@ -6,24 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/FPS/Scenes/IntroMenu.unity
+    path: Assets/Scenes/IntroMenu.unity
     guid: 56e3faabc5bb30f49a68bb8f1292f988
   - enabled: 1
-    path: Assets/FPS/Scenes/WinScene.unity
+    path: Assets/Scenes/WinScene.unity
     guid: 037d06fbede2b4041a843d9ee6fe750c
   - enabled: 1
-    path: Assets/FPS/Scenes/LoseScene.unity
+    path: Assets/Scenes/LoseScene.unity
     guid: 72e5c65a45893714484002914e3fd521
   - enabled: 1
-    path: Assets/FPS/Scenes/MainScene.unity
+    path: Assets/Scenes/MainScene.unity
     guid: d794a2ef8ba31d847ad3c19d03e2ddb9
   - enabled: 1
-    path: Assets/FPS/Scenes/LabMap.unity
+    path: Assets/Scenes/LabMap.unity
     guid: 89e66b0bffc00a543813f0748c8c96df
   - enabled: 1
-    path: Assets/FPS/Scenes/SeaportMap.unity
+    path: Assets/Scenes/SeaportMap.unity
     guid: fdd76ced07b7c27468da3e8f6857a5b3
   - enabled: 1
-    path: Assets/FPS/Scenes/SnowMap.unity
+    path: Assets/Scenes/SnowMap.unity
     guid: a4ca55080480bfa4bba17ca3c2e0b27d
   m_configObjects: {}

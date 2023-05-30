@@ -91,6 +91,19 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.unity.live-capture": {
+      "version": "3.0.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.imageconversion": "1.0.0",
+        "com.unity.modules.jsonserialize": "1.0.0",
+        "com.unity.modules.physics": "1.0.0",
+        "com.unity.timeline": "1.6.4",
+        "com.unity.ugui": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.mathematics": {
       "version": "1.2.6",
       "depth": 1,
@@ -227,6 +240,21 @@
       "dependencies": {
         "com.unity.modules.ui": "1.0.0",
         "com.unity.modules.imgui": "1.0.0"
+      }
+    },
+    "com.unity.vfx-toolbox": {
+      "version": "file:C:/Users/nurda/Desktop/VFXToolbox-master",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
+    "com.unity.visualeffectgraph": {
+      "version": "12.1.7",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.shadergraph": "12.1.7",
+        "com.unity.render-pipelines.core": "12.1.7"
       }
     },
     "com.unity.visualscripting": {
