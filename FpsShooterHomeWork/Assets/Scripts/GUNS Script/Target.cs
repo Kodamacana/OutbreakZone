@@ -13,6 +13,8 @@ public class Target : MonoBehaviour
     {
         enemyHealthBar.maxValue = health;
         enemyHealthBar.value =health;
+        StopCoroutine("HealthBarAnim");
+        StartCoroutine(HealthBarAnim());
     }
     public void TakeDamage (float amount)
     {
@@ -37,8 +39,8 @@ public class Target : MonoBehaviour
     IEnumerator HealthBarAnim()
     {
         enemyHealthBar.value = health;
-        enemyHealthBar.gameObject.SetActive(true);
+        enemyHealthBar.transform.parent.gameObject.SetActive(true);
         yield return new WaitForSecondsRealtime(3);
-        enemyHealthBar.gameObject.SetActive(false);
+        enemyHealthBar.transform.parent.gameObject.SetActive(false);
     }
 }

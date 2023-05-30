@@ -392,7 +392,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh32416
+  m_Name: pb_Mesh44066
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -971,7 +971,7 @@ PrefabInstance:
     - target: {fileID: 6748149223228106202, guid: 44d57803f79df694da7b694ed47dcd30,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 6748149223228106202, guid: 44d57803f79df694da7b694ed47dcd30,
         type: 3}
@@ -1058,6 +1058,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ZombieSpawner (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6748149223228106204, guid: 44d57803f79df694da7b694ed47dcd30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44d57803f79df694da7b694ed47dcd30, type: 3}
@@ -3212,7 +3217,7 @@ PrefabInstance:
     - target: {fileID: 6748149223228106202, guid: 44d57803f79df694da7b694ed47dcd30,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6748149223228106202, guid: 44d57803f79df694da7b694ed47dcd30,
         type: 3}
@@ -3300,6 +3305,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ZombieSpawner (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 6748149223228106204, guid: 44d57803f79df694da7b694ed47dcd30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44d57803f79df694da7b694ed47dcd30, type: 3}
 --- !u!1 &205473413 stripped
@@ -3314,7 +3324,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh31376
+  m_Name: pb_Mesh43028
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13288,7 +13298,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh33230
+  m_Name: pb_Mesh44880
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17136,7 +17146,7 @@ PrefabInstance:
     - target: {fileID: 6748149223228106202, guid: 44d57803f79df694da7b694ed47dcd30,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6748149223228106202, guid: 44d57803f79df694da7b694ed47dcd30,
         type: 3}
@@ -17223,6 +17233,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ZombieSpawner (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6748149223228106204, guid: 44d57803f79df694da7b694ed47dcd30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44d57803f79df694da7b694ed47dcd30, type: 3}
@@ -19201,7 +19216,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh33556
+  m_Name: pb_Mesh45208
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20575,7 +20590,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh32556
+  m_Name: pb_Mesh44206
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22139,7 +22154,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1077856780
 PrefabInstance:
@@ -23056,7 +23071,7 @@ PrefabInstance:
     - target: {fileID: 6748149223228106202, guid: 44d57803f79df694da7b694ed47dcd30,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 6748149223228106202, guid: 44d57803f79df694da7b694ed47dcd30,
         type: 3}
@@ -23143,6 +23158,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ZombieSpawner (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6748149223228106204, guid: 44d57803f79df694da7b694ed47dcd30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44d57803f79df694da7b694ed47dcd30, type: 3}
@@ -25400,7 +25420,7 @@ PrefabInstance:
     - target: {fileID: 6748149223228106202, guid: 44d57803f79df694da7b694ed47dcd30,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 6748149223228106202, guid: 44d57803f79df694da7b694ed47dcd30,
         type: 3}
@@ -25487,6 +25507,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ZombieSpawner (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6748149223228106204, guid: 44d57803f79df694da7b694ed47dcd30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44d57803f79df694da7b694ed47dcd30, type: 3}
@@ -25763,7 +25788,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh31262
+  m_Name: pb_Mesh42914
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27103,7 +27128,7 @@ PrefabInstance:
     - target: {fileID: 6748149223228106202, guid: 44d57803f79df694da7b694ed47dcd30,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6748149223228106202, guid: 44d57803f79df694da7b694ed47dcd30,
         type: 3}
@@ -27191,6 +27216,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ZombieSpawner (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6748149223228106204, guid: 44d57803f79df694da7b694ed47dcd30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44d57803f79df694da7b694ed47dcd30, type: 3}
 --- !u!1 &1304165083 stripped
@@ -27212,6 +27242,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.9976742, y: 2.1072993, z: 0.10932804}
   m_Center: {x: 0, y: 0.7391202, z: 0}
+--- !u!1 &1304874024 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2183155725203336813, guid: 0acdd97208ef0ed44bd5925b9080cce1,
+    type: 3}
+  m_PrefabInstance: {fileID: 379854973503101858}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1305967985 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c1a5edadb51192244ba4ef6370ae4f11,
@@ -30445,7 +30481,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh33562
+  m_Name: pb_Mesh45214
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -30826,7 +30862,7 @@ PrefabInstance:
     - target: {fileID: 6748149223228106202, guid: 44d57803f79df694da7b694ed47dcd30,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6748149223228106202, guid: 44d57803f79df694da7b694ed47dcd30,
         type: 3}
@@ -30913,6 +30949,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ZombieSpawner (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6748149223228106204, guid: 44d57803f79df694da7b694ed47dcd30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44d57803f79df694da7b694ed47dcd30, type: 3}
@@ -32042,7 +32083,7 @@ PrefabInstance:
     - target: {fileID: 6748149223228106202, guid: 44d57803f79df694da7b694ed47dcd30,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6748149223228106202, guid: 44d57803f79df694da7b694ed47dcd30,
         type: 3}
@@ -32129,6 +32170,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ZombieSpawner (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6748149223228106204, guid: 44d57803f79df694da7b694ed47dcd30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44d57803f79df694da7b694ed47dcd30, type: 3}
@@ -33734,7 +33780,7 @@ PrefabInstance:
     - target: {fileID: 6748149223228106202, guid: 44d57803f79df694da7b694ed47dcd30,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 6748149223228106202, guid: 44d57803f79df694da7b694ed47dcd30,
         type: 3}
@@ -33821,6 +33867,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ZombieSpawner (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6748149223228106204, guid: 44d57803f79df694da7b694ed47dcd30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44d57803f79df694da7b694ed47dcd30, type: 3}
@@ -35383,7 +35434,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh31252
+  m_Name: pb_Mesh42904
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -38295,6 +38346,145 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b23f31520e400004e9445c78b72fc04c, type: 3}
+--- !u!1001 &1818899335
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3008631131085807982, guid: f0fe12c713bc55d45ace6ae72e7964f1,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3008631131085807982, guid: f0fe12c713bc55d45ace6ae72e7964f1,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6026960589420678786, guid: f0fe12c713bc55d45ace6ae72e7964f1,
+        type: 3}
+      propertyPath: m_Name
+      value: Zombie
+      objectReference: {fileID: 0}
+    - target: {fileID: 7552233530703678610, guid: f0fe12c713bc55d45ace6ae72e7964f1,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7552233530703678610, guid: f0fe12c713bc55d45ace6ae72e7964f1,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952448377077756512, guid: f0fe12c713bc55d45ace6ae72e7964f1,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952448377077756512, guid: f0fe12c713bc55d45ace6ae72e7964f1,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952448377077756512, guid: f0fe12c713bc55d45ace6ae72e7964f1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952448377077756512, guid: f0fe12c713bc55d45ace6ae72e7964f1,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952448377077756512, guid: f0fe12c713bc55d45ace6ae72e7964f1,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952448377077756512, guid: f0fe12c713bc55d45ace6ae72e7964f1,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952448377077756512, guid: f0fe12c713bc55d45ace6ae72e7964f1,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952448377077756512, guid: f0fe12c713bc55d45ace6ae72e7964f1,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952448377077756512, guid: f0fe12c713bc55d45ace6ae72e7964f1,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952448377077756512, guid: f0fe12c713bc55d45ace6ae72e7964f1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952448377077756512, guid: f0fe12c713bc55d45ace6ae72e7964f1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952448377077756512, guid: f0fe12c713bc55d45ace6ae72e7964f1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 223.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952448377077756512, guid: f0fe12c713bc55d45ace6ae72e7964f1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.78353083
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952448377077756512, guid: f0fe12c713bc55d45ace6ae72e7964f1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952448377077756512, guid: f0fe12c713bc55d45ace6ae72e7964f1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.621353
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952448377077756512, guid: f0fe12c713bc55d45ace6ae72e7964f1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952448377077756512, guid: f0fe12c713bc55d45ace6ae72e7964f1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 144.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952448377077756512, guid: f0fe12c713bc55d45ace6ae72e7964f1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.000005722046
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952448377077756512, guid: f0fe12c713bc55d45ace6ae72e7964f1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952448377077756512, guid: f0fe12c713bc55d45ace6ae72e7964f1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -76.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952448377077756512, guid: f0fe12c713bc55d45ace6ae72e7964f1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f0fe12c713bc55d45ace6ae72e7964f1, type: 3}
 --- !u!1 &1820033993 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c1a5edadb51192244ba4ef6370ae4f11,
@@ -42348,7 +42538,7 @@ PrefabInstance:
     - target: {fileID: 6748149223228106202, guid: 44d57803f79df694da7b694ed47dcd30,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6748149223228106202, guid: 44d57803f79df694da7b694ed47dcd30,
         type: 3}
@@ -42435,6 +42625,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ZombieSpawner (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6748149223228106204, guid: 44d57803f79df694da7b694ed47dcd30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44d57803f79df694da7b694ed47dcd30, type: 3}
@@ -42989,7 +43184,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh32548
+  m_Name: pb_Mesh44198
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -43153,7 +43348,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh32370
+  m_Name: pb_Mesh44020
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -45487,7 +45682,7 @@ PrefabInstance:
     - target: {fileID: 6748149223228106202, guid: 44d57803f79df694da7b694ed47dcd30,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6748149223228106202, guid: 44d57803f79df694da7b694ed47dcd30,
         type: 3}
@@ -45574,6 +45769,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ZombieSpawner (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6748149223228106204, guid: 44d57803f79df694da7b694ed47dcd30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44d57803f79df694da7b694ed47dcd30, type: 3}
@@ -46558,6 +46758,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0acdd97208ef0ed44bd5925b9080cce1, type: 3}
+--- !u!1 &379854973503101859 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7457042751017684644, guid: 0acdd97208ef0ed44bd5925b9080cce1,
+    type: 3}
+  m_PrefabInstance: {fileID: 379854973503101858}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &379854973503101860 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3572404713576502965, guid: 0acdd97208ef0ed44bd5925b9080cce1,
+    type: 3}
+  m_PrefabInstance: {fileID: 379854973503101858}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &379854973503101861 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2009298067587207844, guid: 0acdd97208ef0ed44bd5925b9080cce1,
+    type: 3}
+  m_PrefabInstance: {fileID: 379854973503101858}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &543450652294964480
 Transform:
   m_ObjectHideFlags: 0
@@ -46974,7 +47192,7 @@ PrefabInstance:
     - target: {fileID: 5469663903750441346, guid: 55799e69340db6b4fb22ad9fa0ef5da3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5469663903750441346, guid: 55799e69340db6b4fb22ad9fa0ef5da3,
         type: 3}
@@ -47031,6 +47249,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ------------ARKIT-------------
       objectReference: {fileID: 0}
+    - target: {fileID: 5469663903750441349, guid: 55799e69340db6b4fb22ad9fa0ef5da3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55799e69340db6b4fb22ad9fa0ef5da3, type: 3}
 --- !u!4 &5856315122255479498
@@ -47085,11 +47308,126 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1044016325183553416, guid: cba3a5f8022211d46bdd03132434efd8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2196354207996842949, guid: cba3a5f8022211d46bdd03132434efd8,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3878585994844497833, guid: cba3a5f8022211d46bdd03132434efd8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 3878585994844497833, guid: cba3a5f8022211d46bdd03132434efd8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3878585994844497833, guid: cba3a5f8022211d46bdd03132434efd8,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99703264
+      objectReference: {fileID: 0}
+    - target: {fileID: 3878585994844497833, guid: cba3a5f8022211d46bdd03132434efd8,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3878585994844497833, guid: cba3a5f8022211d46bdd03132434efd8,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.076980084
+      objectReference: {fileID: 0}
+    - target: {fileID: 3878585994844497833, guid: cba3a5f8022211d46bdd03132434efd8,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3878585994844497833, guid: cba3a5f8022211d46bdd03132434efd8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3878585994844497833, guid: cba3a5f8022211d46bdd03132434efd8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 8.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 4347171757376710991, guid: cba3a5f8022211d46bdd03132434efd8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015026236263249937, guid: cba3a5f8022211d46bdd03132434efd8,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 8.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015026236263249937, guid: cba3a5f8022211d46bdd03132434efd8,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015026237612374488, guid: cba3a5f8022211d46bdd03132434efd8,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015026237612374488, guid: cba3a5f8022211d46bdd03132434efd8,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015026237612374488, guid: cba3a5f8022211d46bdd03132434efd8,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015026237612374488, guid: cba3a5f8022211d46bdd03132434efd8,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6240881
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015026237612374488, guid: cba3a5f8022211d46bdd03132434efd8,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.0015273449
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015026237612374488, guid: cba3a5f8022211d46bdd03132434efd8,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7807826
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015026237612374488, guid: cba3a5f8022211d46bdd03132434efd8,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.029838381
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015026237612374488, guid: cba3a5f8022211d46bdd03132434efd8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015026237612374488, guid: cba3a5f8022211d46bdd03132434efd8,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6121257222152871471, guid: cba3a5f8022211d46bdd03132434efd8,
         type: 3}
       propertyPath: text
       value: 
       objectReference: {fileID: 1948269206486665517}
+    - target: {fileID: 6121257222152871471, guid: cba3a5f8022211d46bdd03132434efd8,
+        type: 3}
+      propertyPath: GunsHUD
+      value: 
+      objectReference: {fileID: 1304874024}
     - target: {fileID: 6121257222152871471, guid: cba3a5f8022211d46bdd03132434efd8,
         type: 3}
       propertyPath: Crosshair
@@ -47112,6 +47450,16 @@ PrefabInstance:
       objectReference: {fileID: 1948269206486665517}
     - target: {fileID: 6121257223501733879, guid: cba3a5f8022211d46bdd03132434efd8,
         type: 3}
+      propertyPath: spread
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 6121257223501733879, guid: cba3a5f8022211d46bdd03132434efd8,
+        type: 3}
+      propertyPath: GunsHUD
+      value: 
+      objectReference: {fileID: 379854973503101860}
+    - target: {fileID: 6121257223501733879, guid: cba3a5f8022211d46bdd03132434efd8,
+        type: 3}
       propertyPath: Crosshair
       value: 
       objectReference: {fileID: 1948269206314103852}
@@ -47125,11 +47473,6 @@ PrefabInstance:
       propertyPath: HeadObject
       value: 
       objectReference: {fileID: 1185681850}
-    - target: {fileID: 6121257223837104853, guid: cba3a5f8022211d46bdd03132434efd8,
-        type: 3}
-      propertyPath: zombieController
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 6121257223837104853, guid: cba3a5f8022211d46bdd03132434efd8,
         type: 3}
       propertyPath: skinnedMeshRenderer
@@ -47197,14 +47540,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6121257224135459116, guid: cba3a5f8022211d46bdd03132434efd8,
         type: 3}
+      propertyPath: GunsHUD
+      value: 
+      objectReference: {fileID: 379854973503101859}
+    - target: {fileID: 6121257224135459116, guid: cba3a5f8022211d46bdd03132434efd8,
+        type: 3}
       propertyPath: Crosshair
       value: 
       objectReference: {fileID: 491292613}
+    - target: {fileID: 6121257224135459120, guid: cba3a5f8022211d46bdd03132434efd8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6343191476109396965, guid: cba3a5f8022211d46bdd03132434efd8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8775162364891491421, guid: cba3a5f8022211d46bdd03132434efd8,
         type: 3}
       propertyPath: text
       value: 
       objectReference: {fileID: 1948269206486665517}
+    - target: {fileID: 8775162364891491421, guid: cba3a5f8022211d46bdd03132434efd8,
+        type: 3}
+      propertyPath: GunsHUD
+      value: 
+      objectReference: {fileID: 379854973503101861}
     - target: {fileID: 8775162364891491421, guid: cba3a5f8022211d46bdd03132434efd8,
         type: 3}
       propertyPath: Crosshair
@@ -47227,7 +47590,7 @@ PrefabInstance:
     - target: {fileID: 6748149223228106202, guid: 44d57803f79df694da7b694ed47dcd30,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6748149223228106202, guid: 44d57803f79df694da7b694ed47dcd30,
         type: 3}
@@ -47314,6 +47677,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ZombieSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 6748149223228106204, guid: 44d57803f79df694da7b694ed47dcd30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44d57803f79df694da7b694ed47dcd30, type: 3}

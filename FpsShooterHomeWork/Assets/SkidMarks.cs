@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class SkidMarks : MonoBehaviour
 {
-    public TrailRenderer[] bloodMarks;
+    public TrailRenderer bloodMarks1;
+    public TrailRenderer bloodMarks2;
+    public TrailRenderer bloodMarks3;
     bool isGround =false, bloodMarksFlag;
     void OnCollisionEnter(Collision collision)
     {
@@ -18,20 +20,22 @@ public class SkidMarks : MonoBehaviour
     void startEmitter()
     {
         if (bloodMarksFlag) return;
-        foreach (TrailRenderer T in bloodMarks)
-        {
-            T.emitting = true;
-        }
+       
+        bloodMarks1.emitting = true;
+        bloodMarks2.emitting = true;
+        bloodMarks3.emitting = true;
+        
         bloodMarksFlag = true;
     }
 
     void stopEmitter()
     {
         if (!bloodMarksFlag) return;
-        foreach (TrailRenderer T in bloodMarks)
-        {
-            T.emitting = false;
-        }
+
+        bloodMarks1.emitting = false;
+        bloodMarks2.emitting = false;
+        bloodMarks3.emitting = false;
+
         bloodMarksFlag = false;
     }
 }
