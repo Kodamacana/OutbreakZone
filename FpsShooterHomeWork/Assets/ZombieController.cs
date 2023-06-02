@@ -64,6 +64,16 @@ public class ZombieController : MonoBehaviour
             return;
         }
 
+        if (IsPlayerinArea())
+        {
+            StopAllAnimation();
+            MoveToPlayer();
+            animator.SetBool("Run", true);
+            navMeshAgent.speed = RunSpeed;
+            isWalking = false;
+            isRandomWalking = false;
+        }
+
         if (!playerSeen)
         {
             if (damaged)
@@ -102,7 +112,7 @@ public class ZombieController : MonoBehaviour
                 navMeshAgent.speed = RunSpeed;
                 isWalking = false;
                 isRandomWalking = false;
-            }
+            }            
             else
             {
                 if (!isWalking && !isRandomWalking)
@@ -157,7 +167,7 @@ public class ZombieController : MonoBehaviour
         Vector3 direction = player.position - transform.position;
         float angle = Vector3.Angle(transform.forward, direction);
 
-        if (angle < 60f)
+        if (angle < 60f && 2.5f < angle)
         {
             StopAllAnimation();
             playerSeen = true;
@@ -170,6 +180,12 @@ public class ZombieController : MonoBehaviour
     {
         float distance = Vector3.Distance(transform.position, player.position);
         return distance < 2.5f;
+    }
+
+    private bool IsPlayerinArea()
+    {
+        float distance = Vector3.Distance(transform.position, player.position);
+        return distance < 20f && distance > 2.5f;
     }
 
     private bool IsPlayerInSight()
@@ -270,7 +286,8 @@ public class ZombieController : MonoBehaviour
     {
         audioClip = AttackSound;
         PlayRandomSound();
-        
+
+        player.GetComponent<PlayerHealth>().TakeDamage(10);
         // Player'a hasar verme iþlemleri burada gerçekleþtirilir.
     }
 

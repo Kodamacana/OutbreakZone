@@ -6,9 +6,10 @@ using UnityEngine;
 
 public class MoveMe : MonoBehaviour
 {
+    [SerializeField] GameObject FlashLight;
     [SerializeField] bool AR;
     [Range(1, 10)]
-    public float ARsensivity = 1;
+    public float AR_sensivity = 1;
     public float walkingSpeed = 7.5f;
     public float runningSpeed = 11.5f;
     public float jumpSpeed = 8.0f;
@@ -57,6 +58,11 @@ public class MoveMe : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.F)) 
+        {
+            FlashLight.SetActive(!FlashLight.activeSelf);
+        }
+
         // We are grounded, so recalculate move direction based on axes
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);

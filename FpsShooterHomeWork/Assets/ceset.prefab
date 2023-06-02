@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 7328417662279425402}
   - component: {fileID: 7328417662279425405}
   - component: {fileID: 1806475836}
-  m_Layer: 12
+  - component: {fileID: 425459901615704495}
+  m_Layer: 0
   m_Name: ceset parca3
-  m_TagString: Untagged
+  m_TagString: Ceset
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6478536213147159724, guid: c1983b3c53eced64ab33a7d8d164660a, type: 3}
+  - {fileID: 2100000, guid: ad41328143b407c4f99ff34462eadee5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -215,6 +216,19 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 0
+--- !u!114 &425459901615704495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7328417662279425404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a90138cf3d56254b9ce0f9881f240ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Blood: {fileID: 3391461172750901738, guid: d9720d51c2cdcd24b9ae8281b1d7ea73, type: 3}
 --- !u!1 &7328417662309258971
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,9 +238,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7328417662309258968}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: ceset
-  m_TagString: Untagged
+  m_TagString: Ceset
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -263,9 +277,10 @@ GameObject:
   - component: {fileID: 6167301326248608233}
   - component: {fileID: 6167301326248608232}
   - component: {fileID: 1806475834}
-  m_Layer: 12
+  - component: {fileID: 1739373711006190511}
+  m_Layer: 0
   m_Name: ceset parca2
-  m_TagString: Untagged
+  m_TagString: Ceset
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -313,7 +328,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6478536213147159724, guid: c1983b3c53eced64ab33a7d8d164660a, type: 3}
+  - {fileID: 2100000, guid: 6d907ca1f3e9bb944ba97ec8dda2c28e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -464,6 +479,19 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 0
+--- !u!114 &1739373711006190511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7598325568150918388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a90138cf3d56254b9ce0f9881f240ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Blood: {fileID: 3391461172750901738, guid: d9720d51c2cdcd24b9ae8281b1d7ea73, type: 3}
 --- !u!1 &7598325568599979387
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,9 +506,10 @@ GameObject:
   - component: {fileID: 6167301324683878498}
   - component: {fileID: 6167301324683878501}
   - component: {fileID: 1806475832}
-  m_Layer: 12
+  - component: {fileID: 666338772935608428}
+  m_Layer: 0
   m_Name: ceset parca1
-  m_TagString: Untagged
+  m_TagString: Ceset
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -528,7 +557,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6478536213147159724, guid: 1a98f3431d9587e45ac279b8d54839a7, type: 3}
+  - {fileID: 2100000, guid: ad41328143b407c4f99ff34462eadee5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -679,3 +708,16 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 0
+--- !u!114 &666338772935608428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7598325568599979387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a90138cf3d56254b9ce0f9881f240ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Blood: {fileID: 3391461172750901738, guid: d9720d51c2cdcd24b9ae8281b1d7ea73, type: 3}

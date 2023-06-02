@@ -12,6 +12,9 @@ public class Gun : MonoBehaviour
     public float timeBetweenShooting, spread, range, reloadTime, timeBetweenShots;
     public int magazineSize, bulletsPerTap;
     public bool allowButtonHold;
+    public bool DoublePistolSwitch;
+    public bool DoublePistol;
+    public Gun OtherPistol;
     int bulletsLeft, bulletsShot;
 
     //bools 
@@ -111,10 +114,27 @@ public class Gun : MonoBehaviour
 
             if (canShoot)
             {
-                bulletsShot = bulletsPerTap;
-                Shoot();
+                if (DoublePistol)
+                {
+                    if (DoublePistolSwitch)
+                    {
+                        bulletsShot = bulletsPerTap;
+                        Shoot();
+                        DoublePistolSwitch = false;
+                        Invoke("OtherPistolSwitch",timeBetweenShooting);
+                    }                   
+                }
+                else
+                {
+                    bulletsShot = bulletsPerTap;
+                    Shoot();
+                }
             }
         }
+    }
+    void OtherPistolSwitch()
+    {
+        OtherPistol.DoublePistolSwitch = true;
     }
     private void Shoot()
     {
@@ -131,18 +151,25 @@ public class Gun : MonoBehaviour
         //RayCast
         if (Physics.Raycast(fpsCam.transform.position, direction, out rayHit, range, whatIsEnemy))
         {
+
             //bullet hole
-            if (!rayHit.transform.name.Contains("Zombi"))
+            string hitTag = rayHit.transform.tag;
+
+            if (!hitTag.Contains("Enemy") && !hitTag.Contains("Player") && !hitTag.Contains("Main Camera") && !hitTag.Contains("Ceset"))
             {
                 GameObject obj = Instantiate(bulletHoleGraphic, rayHit.point, Quaternion.LookRotation(rayHit.normal));
                 obj.transform.position += obj.transform.forward / 1000;
-            }            
+            }
+
             //
 
             Target target = rayHit.transform.GetComponent<Target>();
+            var targetCeset = rayHit.transform.GetComponent<TargetCeset>();
 
             if (rayHit.collider.CompareTag("Enemy"))
                 target.TakeDamage(damage);
+            else if (rayHit.collider.CompareTag("Ceset"))
+                targetCeset.TakeDamageCeset();
         }
 
         transform.GetComponent<AdvancedWeaponRecoil>().Fire();

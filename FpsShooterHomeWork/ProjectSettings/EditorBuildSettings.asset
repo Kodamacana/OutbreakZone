@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/IntroMenu.unity
+    path: Assets/Scenes/00_IntroMenu.unity
     guid: 56e3faabc5bb30f49a68bb8f1292f988
   - enabled: 1
     path: Assets/Scenes/WinScene.unity
@@ -21,9 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/LabMap.unity
     guid: 89e66b0bffc00a543813f0748c8c96df
   - enabled: 1
-    path: Assets/Scenes/SeaportMap.unity
-    guid: fdd76ced07b7c27468da3e8f6857a5b3
-  - enabled: 1
     path: Assets/Scenes/SnowMap.unity
     guid: a4ca55080480bfa4bba17ca3c2e0b27d
+  - enabled: 1
+    path: Assets/SeaportTest.unity
+    guid: 48cf55ae6ad01ae4cab698bbb85c2862
   m_configObjects: {}
