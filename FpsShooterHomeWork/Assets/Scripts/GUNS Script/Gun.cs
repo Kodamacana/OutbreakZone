@@ -7,7 +7,8 @@ using UnityEngine.VFX;
 public class Gun : MonoBehaviour
 {
     [SerializeField] SkinnedMeshRenderer skinnedMeshRenderer;
-    [SerializeField] bool AR = false;
+    bool AR = false;
+    [SerializeField] GameObject ARKitGameObject;
     public int damage;
     public float timeBetweenShooting, spread, range, reloadTime, timeBetweenShots;
     public int magazineSize, bulletsPerTap;
@@ -84,6 +85,17 @@ public class Gun : MonoBehaviour
 
     private void Update()
     {
+        if (ARKitGameObject != null)
+        {
+            if (ARKitGameObject.activeSelf)
+            {
+                AR = true;
+            }
+            else
+            {
+                AR = false;
+            }
+        }
         HandleShootingInput();
         
         //SetText
@@ -102,9 +114,16 @@ public class Gun : MonoBehaviour
                 bool ARFire = false;
                 float mouthSmile_L = skinnedMeshRenderer.GetBlendShapeWeight(skinnedMeshRenderer.sharedMesh.GetBlendShapeIndex("mouthSmile_L"));
                 float mouthSmile_R = skinnedMeshRenderer.GetBlendShapeWeight(skinnedMeshRenderer.sharedMesh.GetBlendShapeIndex("mouthSmile_R"));
+                float EyeClosed_L = skinnedMeshRenderer.GetBlendShapeWeight(skinnedMeshRenderer.sharedMesh.GetBlendShapeIndex("eyeBlinking_Left"));
+                float EyeClosed_R = skinnedMeshRenderer.GetBlendShapeWeight(skinnedMeshRenderer.sharedMesh.GetBlendShapeIndex("eyeBlinking_Right"));
+                
                 if (mouthSmile_L >= 40 && mouthSmile_R >= 40) ARFire = true;
 
                 canShoot = ARFire && readyToShoot && !reloading && bulletsLeft > 0;
+                if ((EyeClosed_L >= 80 && EyeClosed_R <= 20 ) && bulletsLeft < magazineSize && !reloading)
+                {
+                    Reload();
+                }
             }
 
             if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && !reloading)
