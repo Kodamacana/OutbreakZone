@@ -9,5 +9,5 @@ public class QuitButton : MonoBehaviour
 #endif
         Application.Quit();
 
-    }
+    }
 }

@@ -739,6 +739,7 @@ GameObject:
   - component: {fileID: 6121257223837104855}
   - component: {fileID: 6121257223837104856}
   - component: {fileID: 6121257223837104857}
+  - component: {fileID: 2740386086597970014}
   - component: {fileID: 6121257223837104853}
   - component: {fileID: 6121257223837104852}
   - component: {fileID: 6121257223837104851}
@@ -830,6 +831,32 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2740386086597970014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6121257223837104858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7216b9b115024061939296bc9b1f31d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orientation: {fileID: 6121257223837104854}
+  playerCam: {fileID: 6121257223083518588}
+  dashForce: 20
+  dashUpwardForce: 0
+  maxDashYSpeed: 15
+  dashDuration: 0.25
+  cam: {fileID: 6121257223083518589}
+  dashFov: 95
+  useCameraForward: 1
+  allowAllDirections: 1
+  disableGravity: 1
+  resetVel: 1
+  dashCd: 1.5
+  dashKey: 304
 --- !u!114 &6121257223837104853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -852,12 +879,24 @@ MonoBehaviour:
   playerCamera: {fileID: 6121257223083518589}
   lookSpeed: 2
   lookXLimit: 75
+  lookYLimit: 45
   zombieController: {fileID: 0}
+  Rb: {fileID: 0}
+  canDash: 1
+  isDashing: 0
+  dashingPower: 24
+  dashingTime: 0.2
+  dashingCooldown: 1
   LeftCoordinate: 12
   RightCoordinate: 12
   HeadObject: {fileID: 0}
   skinnedMeshRenderer: {fileID: 0}
   canMove: 1
+  aimlockKey: 324
+  maxDistance: 100
+  aimlockDistance: 10
+  aimlockAngle: 45
+  smoothSpeed: 5
 --- !u!143 &6121257223837104852
 CharacterController:
   m_ObjectHideFlags: 0
@@ -889,9 +928,9 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &7113863172386803568
 MonoBehaviour:
   m_ObjectHideFlags: 0

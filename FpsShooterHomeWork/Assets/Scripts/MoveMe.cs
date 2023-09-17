@@ -20,16 +20,29 @@ public class MoveMe : MonoBehaviour
     public float lookXLimit = 45.0f;
     public float lookYLimit = 45.0f;
 
-    CharacterController characterController;
+    public CharacterController characterController;
     Vector3 moveDirection = Vector3.zero;
     float rotationX = 0;
     float rotationY = 0;
     [SerializeField] ZombieController zombieController;
+    [SerializeField] Rigidbody Rb;
+
+    [Header("Dash")]
+    [Header("------------------")]
+    public bool canDash = true;
+    public bool isDashing;
+    public float dashingPower = 24f;
+    public float dashingTime = 0.2f;
+    public float dashingCooldown = 1f;
+
+
     [Header("AR Callibration")]
     [Header("------------------")]
     [Header("Head Rotation")]
     [SerializeField] float LeftCoordinate = 0;
     [SerializeField] float RightCoordinate = 0;
+    [SerializeField] float TopperCoordinate = 0;
+    [SerializeField] float BotterCoordinate = 0;
     [SerializeField] GameObject HeadObject;
     Vector3 HeadRotation;
 
@@ -72,6 +85,10 @@ public class MoveMe : MonoBehaviour
 
     void Update()
     {
+        if (isDashing)
+        {
+            return;
+        }
         if (ARKitGameObject != null)
         {
             if (ARKitGameObject.activeSelf)
@@ -106,11 +123,19 @@ public class MoveMe : MonoBehaviour
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);
         // Press Left Shift to run
+        //bool isRunning = true;
+        //float curSpeedX = canMove ? (isRunning ?  walkingSpeed: walkingSpeed) * Input.GetAxis("Vertical") : 0;
+        //float curSpeedY = canMove ? (isRunning ?  walkingSpeed: walkingSpeed) * Input.GetAxis("Horizontal") : 0;
         bool isRunning = Input.GetKey(KeyCode.LeftShift);
         float curSpeedX = canMove ? (isRunning ? runningSpeed : walkingSpeed) * Input.GetAxis("Vertical") : 0;
         float curSpeedY = canMove ? (isRunning ? runningSpeed : walkingSpeed) * Input.GetAxis("Horizontal") : 0;
         float movementDirectionY = moveDirection.y;
         moveDirection = (forward * curSpeedX) + (right * curSpeedY);
+
+        //if (Input.GetKeyDown(KeyCode.LeftShift)&& canDash)
+        //{
+        //    StartCoroutine(Dash());
+        //}
 
         if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
         {
@@ -133,20 +158,20 @@ public class MoveMe : MonoBehaviour
             RaycastHit hit;
             Ray ray = playerCamera.ScreenPointToRay(Input.mousePosition);
 
-            // Fare pozisyonunda bir ýþýn oluþtur ve çarpýþma kontrolü yap
+            // Fare pozisyonunda bir ???n olu?tur ve ?arp??ma kontrol? yap
             if (Physics.Raycast(ray, out hit, maxDistance))
             {
-                // Çarpýþma noktasýndaki düþmaný hedefle
+                // ?arp??ma noktas?ndaki d??man? hedefle
                 if (Physics.Raycast(ray, out hit, maxDistance))
                 {
-                    // Çarpýþma noktasýndaki düþmaný hedefle
+                    // ?arp??ma noktas?ndaki d??man? hedefle
                     if (hit.collider.CompareTag("Enemy"))
                     {
                         float distanceToEnemy = Vector3.Distance(transform.position, hit.collider.transform.position);
                         Vector3 directionToEnemy = hit.collider.transform.position - transform.position;
                         float angleToEnemy = Vector3.Angle(transform.forward, directionToEnemy);
 
-                        // Aimlock tuþuna basýldýðýnda, düþman belirli bir mesafede ve belirli bir bakýþ açýsý içerisindeyse aimlock'u etkinleþtir
+                        // Aimlock tu?una bas?ld???nda, d??man belirli bir mesafede ve belirli bir bak?? a??s? i?erisindeyse aimlock'u etkinle?tir
                         if (ARFire && distanceToEnemy <= aimlockDistance && angleToEnemy <= aimlockAngle)
                         {
                             lockedTarget = hit.collider.transform;
@@ -155,13 +180,13 @@ public class MoveMe : MonoBehaviour
                     }
                 }
 
-                // Aimlock tuþu býrakýldýðýnda aimlock'u kapat
+                // Aimlock tu?u b?rak?ld???nda aimlock'u kapat
                 if (ARFire)
                 {
                     isAimlockActive = false;
                 }
 
-                // Hedef kilidi varsa, her güncellemede ona doðru pürüzsüz bir þekilde dön
+                // Hedef kilidi varsa, her g?ncellemede ona do?ru p?r?zs?z bir ?ekilde d?n
                 if (lockedTarget != null && isAimlockActive)
                 {
                     Vector3 targetPosition = lockedTarget.position;
@@ -172,13 +197,14 @@ public class MoveMe : MonoBehaviour
         
         }
         // Move the controller
-        characterController.Move(moveDirection * Time.deltaTime);
+       
 
         // Player and Camera rotation
         if (canMove)
         {
             if (!AR)
             {
+                characterController.Move(moveDirection * Time.deltaTime);
                 rotationX += Input.GetAxis("Mouse Y") * lookSpeed;
                 rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
                 playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
@@ -187,23 +213,38 @@ public class MoveMe : MonoBehaviour
             }
             else
             {
-                var result = Mathf.Abs(RightCoordinate) + Mathf.Abs(LeftCoordinate);
-                result = 360 / result;
-                float originalValue = HeadObject.transform.localRotation.eulerAngles.y;
+                characterController.Move(moveDirection * Time.deltaTime);
+                var resultX = Mathf.Abs(RightCoordinate) + Mathf.Abs(LeftCoordinate);
+                var resultY = Mathf.Abs(TopperCoordinate) + Mathf.Abs(BotterCoordinate);
+                resultX = 360 / resultX;
+                resultY = 360 / resultY;
+                float originalValueX = HeadObject.transform.localRotation.eulerAngles.y;
+                float originalValueY = HeadObject.transform.localRotation.eulerAngles.x;
 
-                playerCamera.transform.localRotation = Quaternion.Euler(HeadObject.transform.localRotation.eulerAngles.x, 0, 0);
-                transform.rotation = Quaternion.Euler(0, originalValue * result, 0);
+
+                transform.rotation = Quaternion.Euler(originalValueY * resultY, originalValueX * resultX, 0);
+
+                //playerCamera.transform.localRotation = Quaternion.Euler(HeadObject.transform.localRotation.eulerAngles.x, 0, 0);
             }
         }
     }
 
+    IEnumerator Dash()
+    {
+        canDash = false;
+        isDashing = true;
+        Rb.velocity = new Vector3(dashingPower, 0f);
+        yield return new WaitForSecondsRealtime(dashingTime);
+        isDashing = false;
+        yield return new WaitForSecondsRealtime(dashingCooldown);
+        canDash = true;
+    }
 
-
-
-   
-        
-
-        
-    
-
+    private void FixedUpdate()
+    {
+        if (isDashing)
+        {
+            return;
+        }
+    }
 }

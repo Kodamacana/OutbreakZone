@@ -28,6 +28,7 @@ public class ZombieController : MonoBehaviour
     [SerializeField] AudioClip AttackSound;
 
     bool call = true;
+
     private void Start()
     {
         audioSource = transform.GetComponent<AudioSource>();
@@ -38,11 +39,12 @@ public class ZombieController : MonoBehaviour
         AudioClip randomClip = idleSounds[Random.Range(0, idleSounds.Length)];
         audioClip = randomClip;
         PlayRandomSound();        
-        // NavMeshAgent bileþenini al
+        // NavMeshAgent bile?enini al
         navMeshAgent = GetComponent<UnityEngine.AI.NavMeshAgent>();
-        // Hareket hýzýný ayarla
+        // Hareket h?z?n? ayarla
         navMeshAgent.speed = RunSpeed;
     }
+
     void StopAllAnimation()
     {
         animator.SetBool("Walk", false);
@@ -221,7 +223,7 @@ public class ZombieController : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, walkSpeed * Time.fixedDeltaTime);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.fixedDeltaTime);
 
-            // Hedefe doðru ilerle
+            // Hedefe do?ru ilerle
             navMeshAgent.SetDestination(targetPosition);
         }
     }
@@ -239,6 +241,7 @@ public class ZombieController : MonoBehaviour
         // Zombi'nin hareketini durdur
         navMeshAgent.ResetPath();
     }
+
     void PlayRandomSound()
     {
         AudioDelayTimer += Time.deltaTime;
@@ -256,8 +259,8 @@ public class ZombieController : MonoBehaviour
                 audioSource.Play();
 
                 CancelInvoke("PlayRandomSound");
-                // Ses çalýndýktan sonra rastgele bir süre bekleyerek tekrar çal
-                float randomTime = Random.Range(5f, 10f); // Örneðin 5 ile 10 saniye arasýnda bir süre seç
+                // Ses ?al?nd?ktan sonra rastgele bir s?re bekleyerek tekrar ?al
+                float randomTime = Random.Range(5f, 10f); // ?rne?in 5 ile 10 saniye aras?nda bir s?re se?
                 Invoke("PlayRandomSound", randomTime);
 
             }
@@ -272,8 +275,8 @@ public class ZombieController : MonoBehaviour
             audioSource.Play();
 
             CancelInvoke("PlayRandomSound");
-            // Ses çalýndýktan sonra rastgele bir süre bekleyerek tekrar çal
-            float randomTime = Random.Range(5f, 10f); // Örneðin 5 ile 10 saniye arasýnda bir süre seç
+            // Ses ?al?nd?ktan sonra rastgele bir s?re bekleyerek tekrar ?al
+            float randomTime = Random.Range(5f, 10f); // ?rne?in 5 ile 10 saniye aras?nda bir s?re se?
             Invoke("PlayRandomSound", randomTime);
 
         }
@@ -281,14 +284,13 @@ public class ZombieController : MonoBehaviour
        
     }
 
-
     private void AttackPlayer()
     {
         audioClip = AttackSound;
         PlayRandomSound();
 
         player.GetComponent<PlayerHealth>().TakeDamage(10);
-        // Player'a hasar verme iþlemleri burada gerçekleþtirilir.
+        // Player'a hasar verme i?lemleri burada ger?ekle?tirilir.
     }
 
     private void Scream()
