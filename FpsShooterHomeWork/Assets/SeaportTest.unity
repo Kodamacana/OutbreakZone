@@ -50179,6 +50179,11 @@ PrefabInstance:
       objectReference: {fileID: 28914188}
     - target: {fileID: 6121257223837104853, guid: cba3a5f8022211d46bdd03132434efd8,
         type: 3}
+      propertyPath: lookSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6121257223837104853, guid: cba3a5f8022211d46bdd03132434efd8,
+        type: 3}
       propertyPath: HeadObject
       value: 
       objectReference: {fileID: 1185681850}
@@ -50325,7 +50330,7 @@ PrefabInstance:
     - target: {fileID: 7113863172386803568, guid: cba3a5f8022211d46bdd03132434efd8,
         type: 3}
       propertyPath: maxHealth
-      value: 100
+      value: 2217
       objectReference: {fileID: 0}
     - target: {fileID: 7113863172386803568, guid: cba3a5f8022211d46bdd03132434efd8,
         type: 3}

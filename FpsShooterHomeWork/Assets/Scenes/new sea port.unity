@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.01602986, g: 0.018923363, b: 0.021959236, a: 1}
+  m_IndirectSpecularColor: {r: 0.016075173, g: 0.018912628, b: 0.021964882, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -48444,6 +48444,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2183155724382046946, guid: 0acdd97208ef0ed44bd5925b9080cce1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2183155725208065110, guid: 0acdd97208ef0ed44bd5925b9080cce1,
         type: 3}
       propertyPath: m_Pivot.x
@@ -48554,6 +48559,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUDCANVAS
       objectReference: {fileID: 0}
+    - target: {fileID: 2183155725208065114, guid: 0acdd97208ef0ed44bd5925b9080cce1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2183155725881998682, guid: 0acdd97208ef0ed44bd5925b9080cce1,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -48573,6 +48583,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2183155726460119954, guid: 0acdd97208ef0ed44bd5925b9080cce1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2771786814151501908, guid: 0acdd97208ef0ed44bd5925b9080cce1,
         type: 3}
@@ -48633,6 +48648,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4947284032281202170, guid: 0acdd97208ef0ed44bd5925b9080cce1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0acdd97208ef0ed44bd5925b9080cce1, type: 3}
@@ -49107,6 +49127,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ------------ARKIT-------------
+      objectReference: {fileID: 0}
+    - target: {fileID: 5469663903750441349, guid: 55799e69340db6b4fb22ad9fa0ef5da3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55799e69340db6b4fb22ad9fa0ef5da3, type: 3}
